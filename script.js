@@ -14,3 +14,15 @@ function getGender(){
 }
 let myGenderValue = getGender();
   console.log(myGenderValue);
+
+  function monthValue() {
+      var monthOfBirth = Number(document.getElementById("month-input").value);
+
+
+
+      if (monthOfBirth < 1 || monthOfBirth > 12) {
+        return false;
+      } else {
+        return true;
+      }
+  }
