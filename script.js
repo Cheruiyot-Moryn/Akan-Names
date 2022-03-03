@@ -38,9 +38,16 @@ let myGenderValue = getGender();
      DD = parseInt(document.getElementById("date").value);
 
       //formula to determine day of birth (Sunday = 1, Monday = 2)etc..
-      
+
      d = ( ( (CC/4) -2*CC-1) + ( (5*YY/4) ) + ((26*(MM+1)/10) ) + DD)%7;
      console.log(d);
 return (Math.floor(d));
   }
 
+  let index;
+
+  if (dayOfWeekNumber == 0){
+    index = 6;
+  } else {
+    index = dayOfWeekNumber - 1;
+  }
