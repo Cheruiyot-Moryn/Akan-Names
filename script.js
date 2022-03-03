@@ -66,4 +66,7 @@ return (Math.floor(d));
     document.getElementById('result').style.fontSize = "20px";
     document.querySelector('h1').textContent = "Hello" + " " + maleAkanNames[index];
     return false;
-  } else 
+  } else {
+    alert("You entered an invalid day or month, please try again");
+  }
+
