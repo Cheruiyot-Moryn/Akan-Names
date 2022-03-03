@@ -18,7 +18,7 @@ let myGenderValue = getGender();
   function monthValue() {
       var monthOfBirth = Number(document.getElementById("month-input").value);
 
-
+// validating the month value
 
       if (monthOfBirth < 1 || monthOfBirth > 12) {
         return false;
