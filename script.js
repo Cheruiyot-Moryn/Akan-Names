@@ -51,3 +51,5 @@ return (Math.floor(d));
   } else {
     index = dayOfWeekNumber - 1;
   }
+
+  console.log(index);
