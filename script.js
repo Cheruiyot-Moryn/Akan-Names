@@ -5,10 +5,12 @@ var maleNames =["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "KOfi", "Kwame"];
 
 function getGender(){
     var genders = document.getElementsByName("gender");
-    
+
     for (let gender of genders){
         if (gender.checked){
           return gender.value;
         }
       }
 }
+let myGenderValue = getGender();
+  console.log(myGenderValue);
