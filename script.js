@@ -1,3 +1,4 @@
+// variables of the Akan male and female names and days of the week
 
 var CC, YY, DD, d, dayValue;
 var dayNames =["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
