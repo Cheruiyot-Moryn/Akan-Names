@@ -1,27 +1,47 @@
-// array showing the male and female akan names
+// List of female and male names,,.
+const femaleNames = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
+const maleNames = [
+  "Kwasi", // 0
+  "Kudwo", // 1
+  "Kwabena", // 2
+  "Kwaku", // 3
+  "Yaw", // 4
+  "Kofi", // 5
+  "Kwame", // 6
+];
 
-var aNames = function(YY, MM, DD, gd) 
-{
-  var fNames = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
-  var mNames = ["Kwasi", "Kudwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
-  var DD = new Date(YY, --MM, DD);
-  if (gd === "Male") {
-      return DD && mNames[DD.getDay()];
-  } else {
-      return DD && fNames[DD.getDay()];
+// Get a user's name...
+const getAkanName = (date_of_birth, gender) => {
+  // Contruct a date...
+  const date = new Date(date_of_birth);
+  // Get the day => number..if day is 1 => sunday
+  const day = date.getDay();
+  // Get name position or index...
+  const index = day - 1;
+  if (gender === "male") {
+    // Gender is male, return a male name...
+    return maleNames[index];
+  } else if (gender === "female") {
+    // Gender is female, return a female name...
+    return femaleNames[index];
   }
-}
+};
 
-$(document).ready(function() {
-  $("form#form").submit(function(event) {
-      event.preventDefault();
-      var YY = parseInt($("#year").val());
-      var MM = parseInt($("#month").val());
-      var DD = parseInt($("#date").val());
-      var gd = $("input:radio[name=gender]:checked").val();
-      var result = aNames(YY, MM, DD, gd);
-      alert("The Akan-Name is: " + result);
-      //refresh page
-      document.getElementById("form").reset();
-  });
+// Get form element...
+const form = document.getElementById("form");
+// Get akan name element...
+const akan_name = document.getElementById("akan-name");
+// Collect data from form input elements...
+form.addEventListener("submit", (event) => {
+  // Prevent a form from submiting itself...
+  event.preventDefault();
+  // Get input elements..
+  const { date, gender} = event.target.elements;
+  // Get the input values...
+  const date_value = date.value;
+  const gender_value = gender.value;
+  // Get akan name...
+  const name = getAkanName(date_value, gender_value);
+  // Do domething with the name...
+   akan_name.innerHTML = `<div>Your Akan Name would be : <b>${name}</b></div>`
 });
