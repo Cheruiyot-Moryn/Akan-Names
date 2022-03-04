@@ -25,13 +25,13 @@ h1 {
     width: 100%;
   }
 
-  form {
-    text-align: left;
-    border-radius: 10px;
+  .form {
+    max-width: 400px;
+    margin: 50px auto;
     padding: 20px;
-    width: 60%;
-    margin-left: 10%;
-}
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+  }
 
 legend {
   text-align: center;
