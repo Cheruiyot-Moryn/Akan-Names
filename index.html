@@ -7,8 +7,9 @@
     <link rel="shortcut icon" href="images/akan title.png" />
     <title>Akan-Names</title>
     <link rel="stylesheet" href="css/style.css" media="all">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
 </head>
-<body class="container-fluid" style="background-image:url(images/ghana.jpg);">
+<body class="container-fluid" style="background-image:url(images/accra.jpg);">
     <div id="heading">
         <h1>The Akan Names</h1>
         <p>This is a web application that takes a user's birthday and calculates the day of the week they were born and then depending on their gender outputs their Akan Name. </p>
@@ -16,39 +17,40 @@
 <div class="container">
     <h2>Enter Your Details</h2>
     <form class="myform" onsubmit="return getAkanName()">
-        <label for="year-of-birth">
-          Year:
-          <input id="year-input" type="number" name="year-of-birth" placeholder="YYYY" value="" required>
-        </label>
-        <label for="month-of-birth">
-          Month:
-          <input id="month-input" type="number" name="month-of-birth" placeholder="MM" value="" required>
-        </label>
-        <label for="day-of-birth">
-          Day:
-          <input id="day-input" type="number" name="day-of-birth" placeholder="DD" value="" required>
-        </label>
-        <br>
-        <label for="gender">
-          <p>Select your gender: </p>
-          Female
-          <input id="female-input" type="radio" name="gender" value="female" required>
-          Male
-          <input id="male-input" type="radio" name="gender" value="male" required>
+      <div class="col-md-8">
+        <form id="form" name="form" onsubmit="findDay()">
+            <legend>Fill in to get your Akan-Name:
+                <hr>
+            </legend>
+            <label for="year ">Year of birth</label>
+            <input type="number" id="year" name="year" min="1900" max="2020" required placeholder="2000">
 
-        </label>
-        <br><br>
-        <input id="get-name" type="submit" name="" value="Generate name">
-        <br><br>
-      </form>
-      <form onsubmit="return clearInput()">
-        <input class="clear" type="submit" value="Clear input">
-      </form>
+            <label for="month ">Month</label>
+            <input type="number" id="month" name="month" min="1" max="12" required placeholder="5">
 
-      <h4 id = display-name><strong>Your Akan-Name will be displayed here:</strong></h4>
-      <p id="result"></p>
+            <label for="date ">Date</label>
+            <input type="number" id="date" name="date" min="1" max="31" required placeholder="21 ">
+
+            <p>Select your gender: <br></p>
+            <div class="radio">
+                <label>
+                  <input type="radio" name="gender" value="Male" checked>
+                  Male
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                  <input type="radio" name="gender" value="Female">
+                  Female
+            </label>
+            </div>
+
+            <input type="submit" value="Submit">
+        </form>
     </div>
-  </div>
+</div>
+</div>
+</div>
 
 <footer class="page-footer ">
     <div class="footer-copyright text-center py-3">Copyright © 2021:
