@@ -9,9 +9,11 @@ This is a web application that takes a user's birthday and calculates the day of
 Frequently in Ghana, children are given their first name as a 'day name' which corresponds to the day in the week they were born. 
 
 ## Languages Used
-HTML
-CSS
-Javascript
+<ol>
+<li>HTML</li>
+<li>CSS</li>
+<li>Javascript</li>
+</ol>
 
 ## BDD
 Write code to handle
@@ -24,9 +26,11 @@ Expected Output
 Correct Akan name to match day of the week. Example Ama - Female born on a Saturday
 
 ## Project setup & collaboration
-To get a local copy up of this project, Clone the repo:
-From the parent folder, Akan-names, you can open index.html on your browser
-Collaborate on this project by forking this repository to your github, clone it and create a new branch to make changes on, then push the changes to your remote repository
+<ul>
+<li>To get a local copy up of this project, Clone the repo:</li>
+<li>From the parent folder, Akan-names, you can open index.html on your browser</li>
+<li>Collaborate on this project by forking this repository to your github, clone it and create a new branch to make changes on, then push the changes to your remote repository</li>
+</ul>
 
 [git clone] (https://github.com/Morynch/Akan-names.git)
 
@@ -36,4 +40,4 @@ Live Link: https://Morynch.github.io/Akan-names/
 
 ## Copyright & License
 * *MIT License:*
-* Copyright (c) 2019 **Moureen Chepkoech**
+* Copyright (c) 2022 **Moureen Chepkoech**
